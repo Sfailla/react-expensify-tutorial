@@ -18,6 +18,8 @@
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-react": "^6.24.1",
 		"css-loader": "^0.28.10",
+		"file-loader": "^1.1.11",
+		"image-webpack-loader": "^4.3.1",
 		"node-sass": "^4.7.2",
 		"normalize.css": "^8.0.0",
 		"react": "^16.4.1",
@@ -25,11 +27,8 @@
 		"sass-loader": "^7.0.3",
 		"style-loader": "^0.21.0",
 		"webpack": "^4.14.0",
-		"webpack-cli": "^3.0.8"
-	},
-	"devDependencies": {
-		"file-loader": "^1.1.11",
-		"image-webpack-loader": "^4.3.1",
+		"webpack-cli": "^3.0.8",
 		"webpack-dev-server": "^3.1.4"
-	}
+	},
+	"devDependencies": {}
 }
