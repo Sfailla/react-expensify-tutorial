@@ -1,6 +1,5 @@
 import React from 'react';
 
-const changes = '';
 const styles = {
 	header: {
 		height: '25rem',
