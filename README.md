@@ -6,10 +6,8 @@ react boilerplate for client includes:
 
 ### by steve failla
 
----
+___
 
 ## To get started
 
-```in terminal type *yarn run start* or *npm start*``` 
-
-to spin up development server and browser. 
+```in terminal type *yarn run start* or *npm start* to spin up development server and browser``` 
