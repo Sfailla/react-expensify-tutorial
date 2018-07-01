@@ -5,3 +5,11 @@ react boilerplate for client includes:
 `react` `react-router` `sass` `webpack`
 
 ### by steve failla
+
+---
+
+## To get started
+
+```in terminal type *yarn run start* or *npm start*``` 
+
+to spin up development server and browser. 
