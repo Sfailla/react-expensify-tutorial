@@ -17,3 +17,15 @@ body {
 button {
 	cursor: pointer;
 }
+
+button:disabled {
+	cursor: none;
+}
+
+.is-active {
+	font-weight: bold;
+}
+
+header a {
+	display: block;
+}

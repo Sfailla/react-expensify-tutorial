@@ -1,39 +1,22 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const styles = {
-	header: {
-		height: '25rem',
-		backgroundColor: '#333',
-		letterSpacing: '2px',
-		textTransform: 'uppercase',
-		textAlign: 'center'
-	},
-	flexContainer: {
-		width: '100%',
-		height: '100%',
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center'
-	},
-	heading: {
-		fontSize: '2.6rem',
-		color: 'magenta'
-	},
-	subHeading: {
-		fontSize: '3.2rem',
-		color: 'cyan'
-	}
-};
-const Header = () => {
-	return (
-		<div style={styles.header}>
-			<div style={styles.flexContainer}>
-				<h2 style={styles.heading}>Welcome to React / React Router / Sass</h2>
-				<h2 style={styles.subHeading}>Boilerplate</h2>
-			</div>
-		</div>
-	);
-};
+const Header = () => (
+	<header>
+		<h1>Expensify</h1>
+		<NavLink exact to="/" activeClassName="is-active">
+			Dashboard
+		</NavLink>
+		<NavLink to="/create" activeClassName="is-active">
+			Create Expense
+		</NavLink>
+		<NavLink to="/edit" activeClassName="is-active">
+			Edit Expense
+		</NavLink>
+		<NavLink to="/help" activeClassName="is-active">
+			Help exact Page
+		</NavLink>
+	</header>
+);
 
 export default Header;
