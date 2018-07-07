@@ -19,4 +19,6 @@ const Header = () => (
 	</header>
 );
 
+console.log('from header');
+
 export default Header;
