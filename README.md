@@ -1,16 +1,5 @@
-# react-boilerplate-client
+# react-expensify-tutorial
 
-react boilerplate for client includes: 
-
-`react` `react-router` `sass` `webpack`
+this is a tutorial based off Andrew Mead's Udemy course 
 
 ### by steve failla
-
-___
-
-## To get started
-```
-- in terminal type *npm install* or *yarn install* to install dependencies
-- type *yarn start* or *npm start* to spin up development server
-```
-
