@@ -9,6 +9,8 @@ react boilerplate for client includes:
 ___
 
 ## To get started
-
+```
 - in terminal type *npm install* or *yarn install* to install dependencies
 - type *yarn start* or *npm start* to spin up development server
+```
+
