@@ -10,5 +10,5 @@ ___
 
 ## To get started
 
-```in terminal type *npm install* or *yarn install* to install dependencies```
-```next type *yarn start* or *npm start* to spin up development server and browser```
+- in terminal type *npm install* or *yarn install* to install dependencies
+- type *yarn start* or *npm start* to spin up development server
