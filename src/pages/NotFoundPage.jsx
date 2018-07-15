@@ -5,7 +5,7 @@ const NotFoundPage = (props) => {
 	console.log(props);
 	return (
 		<div>
-			404! -- <Link to="/">Go back</Link>
+			404! -- <Link to="/">Go back to Home</Link>
 		</div>
 	);
 };
