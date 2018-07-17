@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
 	entry: {
 		app: './src/app.js'
-		// app: './src/playground/hoc.js'
+		// app: './src/playground/redux-102.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),

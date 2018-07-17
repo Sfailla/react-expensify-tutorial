@@ -4,7 +4,7 @@
 	"description": "tutorial based off Andrew Mead udemy course",
 	"main": "app.js",
 	"scripts": {
-		"start": "npm run dev-server",
+		"start": "yarn run dev-server",
 		"dev-server": "start http://localhost:8080/ & webpack-dev-server --config ./webpack.config.js --mode development",
 		"build": "webpack --mode production"
 	},

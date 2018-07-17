@@ -16,11 +16,11 @@ const store = configureStore();
 store.dispatch(addExpense({ description: 'water bill', amount: 700, createdAt: 100 }));
 store.dispatch(addExpense({ description: 'gas bill', amount: 500, createdAt: 275 }));
 store.dispatch(addExpense({ description: 'apt rent', amount: 2500, createdAt: -477 }));
-// store.dispatch(setTextFilter());
+store.dispatch(setTextFilter(''));
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-
+// console.log('State => ', state);
 console.log(visibleExpenses);
 
 const jsx = (

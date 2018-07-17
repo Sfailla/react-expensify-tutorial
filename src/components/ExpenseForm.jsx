@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-import connect from 'react-redux';
-import { addExpense } from '../actions/expenses';
-
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 import 'react-dates/initialize';
 
 class ExpenseForm extends Component {
-	state = {
-		description: '',
-		note: '',
-		amount: '',
-		createdAt: moment(),
-		calenderFocused: false,
-		error: ''
-	};
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			description: props.expense ? props.expense.description : '',
+			note: props.expense ? props.expense.note : '',
+			amount: props.expense ? (props.expense.amount / 100).toString() : '',
+			createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+			calenderFocused: false,
+			error: ''
+		};
+	}
 
 	onDescriptionChange = (evt) => {
 		const description = evt.target.value;
@@ -52,7 +53,6 @@ class ExpenseForm extends Component {
 
 		if (!this.state.description || !this.state.amount) {
 			this.setState(() => ({ error: 'Please provide description and amount' }));
-			console.log(this.state.createdAt._d);
 		} else {
 			this.setState(() => ({ error: '' }));
 			this.props.onSubmit({
