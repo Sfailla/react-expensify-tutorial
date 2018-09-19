@@ -30,13 +30,13 @@ test('should generate action object for sort by date', () => {
 	});
 });
 
-test('should generate set text filter object with default \'\' string ', () => {
+test("should generate set text filter object with default '' string ", () => {
 	const action = setTextFilter();
 	expect(action).toEqual({
 		type: 'SET_TEXT_FILTER',
 		text: ''
-	})
-})
+	});
+});
 
 test('should generate action object for sort by amount', () => {
 	const sortAmount = sortByAmount();

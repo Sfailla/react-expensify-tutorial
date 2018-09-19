@@ -1,8 +1,4 @@
-import {
-	addExpense,
-	editExpense,
-	removeExpense
-} from '../../actions/expenses';
+import { addExpense, editExpense, removeExpense } from '../../actions/expenses';
 
 // calling .toBe is to compare a string or bool.
 // use .toEqual when comparing objects and arrays.
