@@ -1,9 +1,15 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import { setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate } from '../actions/filters';
+import {
+	setTextFilter,
+	sortByAmount,
+	sortByDate,
+	setStartDate,
+	setEndDate
+} from '../actions/filters';
 import { DateRangePicker } from 'react-dates';
 
-class ExpenseListFilters extends Component {
+class ExpenseListFilters extends React.Component {
 	state = {
 		calenderFocused: null
 	};
@@ -13,38 +19,37 @@ class ExpenseListFilters extends Component {
 		this.props.dispatch(setEndDate(endDate));
 	};
 
-	onFocusChange = (calenderFocused) => {
+	onFocusChange = calenderFocused => {
 		this.setState(() => ({ calenderFocused }));
 	};
 
 	render() {
 		return (
-			<div>
+			<Fragment>
 				<input
 					style={{ height: '25px' }}
-					type="text"
+					type='text'
 					value={this.props.filters.text}
-					onChange={(evt) => {
+					onChange={evt => {
 						this.props.dispatch(setTextFilter(evt.target.value));
 					}}
 				/>
 
 				<select
 					value={this.props.filters.sortBy}
-					onChange={(evt) => {
+					onChange={evt => {
 						evt.target.value === 'date'
 							? this.props.dispatch(sortByDate())
 							: this.props.dispatch(sortByAmount());
-					}}
-				>
-					<option value="date">Date</option>
-					<option value="amount">Amount</option>
+					}}>
+					<option value='date'>Date</option>
+					<option value='amount'>Amount</option>
 				</select>
 
 				<DateRangePicker
-					startDateId="startDate"
+					startDateId='startDate'
 					startDate={this.props.filters.startDate}
-					endDateId="endDate"
+					endDateId='endDate'
 					endDate={this.props.filters.endDate}
 					onDatesChange={this.onDatesChange}
 					focusedInput={this.state.calenderFocused}
@@ -52,12 +57,12 @@ class ExpenseListFilters extends Component {
 					numberOfMonths={1}
 					isOutsideRange={() => false}
 				/>
-			</div>
+			</Fragment>
 		);
 	}
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
 	filters: state.filters
 });
 

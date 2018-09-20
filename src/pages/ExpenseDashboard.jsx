@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ExpenseList from '../components/ExpenseList';
 import ExpenseListFilters from '../components/ExpenseListFilters';
 
 const ExpenseDashboardPage = () => (
-	<div>
+	<Fragment>
 		<ExpenseList />
 		<ExpenseListFilters />
-	</div>
+	</Fragment>
 );
 export default ExpenseDashboardPage;

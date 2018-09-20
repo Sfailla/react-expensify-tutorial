@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
 export const ExpenseList = props => {
 	return (
-		<div>
+		<Fragment>
 			<h1>Expense List</h1>
 			{props.expenses.length > 0 ? (
 				props.expenses.map(expense => {
@@ -14,7 +14,7 @@ export const ExpenseList = props => {
 			) : (
 				<p>Sorry No Expenses</p>
 			)}
-		</div>
+		</Fragment>
 	);
 };
 

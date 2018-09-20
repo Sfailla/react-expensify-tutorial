@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 
-export class ExpenseForm extends Component {
+export class ExpenseForm extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -66,7 +66,7 @@ export class ExpenseForm extends Component {
 
 	render() {
 		return (
-			<div>
+			<Fragment>
 				{this.state.error && (
 					<p style={{ color: 'red' }}>-{this.state.error}-</p>
 				)}
@@ -102,7 +102,7 @@ export class ExpenseForm extends Component {
 
 					<button type='submit'>Add Expense</button>
 				</form>
-			</div>
+			</Fragment>
 		);
 	}
 }

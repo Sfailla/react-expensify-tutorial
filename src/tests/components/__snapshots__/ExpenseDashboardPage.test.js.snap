@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseDashboard 1`] = `
-<div>
+<Fragment>
   <Connect(ExpenseList) />
   <Connect(ExpenseListFilters) />
-</div>
+</Fragment>
 `;

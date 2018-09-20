@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import ExpenseDashboardPage from '../pages/ExpenseDashboard';
@@ -10,16 +10,16 @@ import Header from '../components/Header';
 
 const AppRouter = () => (
 	<Router>
-		<div>
+		<Fragment>
 			<Header />
 			<Switch>
-				<Route path="/" component={ExpenseDashboardPage} exact={true} />
-				<Route path="/create" component={AddExpensePage} />
-				<Route path="/edit/:id" component={EditExpensePage} />
-				<Route path="/help" component={HelpPage} />
+				<Route path='/' component={ExpenseDashboardPage} exact={true} />
+				<Route path='/create' component={AddExpensePage} />
+				<Route path='/edit/:id' component={EditExpensePage} />
+				<Route path='/help' component={HelpPage} />
 				<Route component={NotFoundPage} />
 			</Switch>
-		</div>
+		</Fragment>
 	</Router>
 );
 

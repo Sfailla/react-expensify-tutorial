@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseList with empty message 1`] = `
-<div>
+<Fragment>
   <h1>
     Expense List
   </h1>
   <p>
     Sorry No Expenses
   </p>
-</div>
+</Fragment>
 `;
 
 exports[`should render ExpenseList with given expenses 1`] = `
-<div>
+<Fragment>
   <h1>
     Expense List
   </h1>
@@ -40,5 +40,5 @@ exports[`should render ExpenseList with given expenses 1`] = `
     key="3"
     note=""
   />
-</div>
+</Fragment>
 `;

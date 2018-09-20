@@ -1,5 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const HelpPage = () => <div>this is my help component</div>;
+const HelpPage = () => <Fragment>this is my help component</Fragment>;
 
 export default HelpPage;

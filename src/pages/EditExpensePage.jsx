@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 
 import ExpenseForm from '../components/ExpenseForm';
 import { editExpense, removeExpense } from '../actions/expenses';
 
-const EditExpensePage = (props) => {
+const EditExpensePage = props => {
 	return (
-		<div>
+		<Fragment>
 			<ExpenseForm
 				expense={props.expense}
-				onSubmit={(expense) => {
+				onSubmit={expense => {
 					props.dispatch(editExpense(props.expense.id, expense));
 					props.history.push('/');
 				}}
@@ -18,16 +18,15 @@ const EditExpensePage = (props) => {
 				onClick={() => {
 					props.dispatch(removeExpense({ id: props.expense.id }));
 					props.history.push('/');
-				}}
-			>
+				}}>
 				Remove
 			</button>
-		</div>
+		</Fragment>
 	);
 };
 
 const mapStateToProps = (state, props) => ({
-	expense: state.expenses.find((expense) => expense.id === props.match.params.id)
+	expense: state.expenses.find(expense => expense.id === props.match.params.id)
 });
 
 export default connect(mapStateToProps)(EditExpensePage);
