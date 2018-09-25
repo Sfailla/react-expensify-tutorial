@@ -7,6 +7,7 @@ module.exports = (env, mode) => {
 	return {
 		entry: {
 			app: './src/app.js'
+			// app: './src/playground/promises.js'
 		},
 		output: {
 			filename: 'bundle.js',
