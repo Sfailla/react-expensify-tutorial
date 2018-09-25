@@ -1,6 +1,12 @@
 {
-   "prettier.singleQuote": true,
-  "prettier.tabWidth": 3,
+  "prettier.singleQuote": true,
   "prettier.jsxBracketSameLine": true,
-  "prettier.jsxSingleQuote": true
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "material-icon-theme.activeIconPack": "react",
+  "prettier.printWidth": 80,
+  "prettier.arrowParens": false,
+  "editor.tabSize": 2,
+  "breadcrumbs.enabled": true,
+  "prettier.tabWidth": 2
 }

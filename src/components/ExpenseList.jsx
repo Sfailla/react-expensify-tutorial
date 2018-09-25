@@ -12,7 +12,7 @@ export const ExpenseList = props => {
 					return <ExpenseListItem key={expense.id} {...expense} />;
 				})
 			) : (
-				<p>Sorry No Expenses</p>
+				<p>Sorry No Expenses works</p>
 			)}
 		</Fragment>
 	);

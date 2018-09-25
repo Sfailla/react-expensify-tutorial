@@ -5,6 +5,7 @@
 	"main": "app.js",
 	"scripts": {
 		"start": "yarn run dev-server",
+		"server": "nodemon server/server.js",
 		"serve": "live-server dist/",
 		"dev-server": "start http://localhost:8080/ & webpack-dev-server --config ./webpack.config.js --mode development",
 		"build:dev": "webpack --mode production",
@@ -21,11 +22,14 @@
 		"babel-plugin-transform-object-rest-spread": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-react": "^6.24.1",
+		"body-parser": "^1.18.3",
 		"css-loader": "^0.28.10",
 		"enzyme": "^3.6.0",
 		"enzyme-adapter-react-16": "^1.5.0",
 		"enzyme-to-json": "^3.3.4",
+		"express": "^4.16.3",
 		"file-loader": "^1.1.11",
+		"helmet": "^3.13.0",
 		"image-webpack-loader": "^4.3.1",
 		"jest": "^23.4.1",
 		"mini-css-extract-plugin": "^0.4.3",
@@ -49,6 +53,7 @@
 		"webpack-dev-server": "^3.1.4"
 	},
 	"devDependencies": {
-		"live-server": "^1.2.0"
+		"live-server": "^1.2.0",
+		"nodemon": "^1.18.4"
 	}
 }
