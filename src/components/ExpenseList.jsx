@@ -4,15 +4,16 @@ import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
 export const ExpenseList = props => {
+	const { expenses } = props;
 	return (
 		<Fragment>
 			<h1>Expense List</h1>
-			{props.expenses.length > 0 ? (
-				props.expenses.map(expense => {
+			{expenses.length > 0 ? (
+				expenses.map(expense => {
 					return <ExpenseListItem key={expense.id} {...expense} />;
 				})
 			) : (
-				<p>Sorry No Expenses works</p>
+				<p>Sorry No Expenses</p>
 			)}
 		</Fragment>
 	);

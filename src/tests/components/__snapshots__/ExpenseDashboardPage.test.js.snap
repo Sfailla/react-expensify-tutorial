@@ -2,6 +2,7 @@
 
 exports[`should render ExpenseDashboard 1`] = `
 <Fragment>
+  <ExpensesSummary />
   <Connect(ExpenseList) />
   <Connect(ExpenseListFilters) />
 </Fragment>

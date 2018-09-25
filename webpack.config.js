@@ -27,7 +27,6 @@ module.exports = (env, mode) => {
 						{
 							loader: 'css-loader',
 							options: {
-								url: false,
 								sourceMap: true
 							}
 						},

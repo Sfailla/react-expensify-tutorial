@@ -6,7 +6,7 @@ exports[`should render ExpenseList with empty message 1`] = `
     Expense List
   </h1>
   <p>
-    Sorry No Expenses works
+    Sorry No Expenses
   </p>
 </Fragment>
 `;
