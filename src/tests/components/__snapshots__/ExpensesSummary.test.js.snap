@@ -8,7 +8,7 @@ exports[`should render expenses summary component correctly with multiple expens
      
     expenses
      totalling 
-    $1,500,195.00
+    $15,001.95
   </h1>
 </Fragment>
 `;
@@ -21,7 +21,7 @@ exports[`should render expenses summary component correctly with single expense 
      
     expense
      totalling 
-    $195.00
+    $1.95
   </h1>
 </Fragment>
 `;
