@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouter from './router/AppRouter';
 import { Provider } from 'react-redux';
+import { startSetExpenses } from './actions/expenses';
 
 import configureStore from './store/configureStore';
-import getVisibleExpenses from './selectors/expenses';
 
 import 'normalize.css/normalize.css';
 import './styles/style.scss';
@@ -20,4 +20,10 @@ const app = (
 	</Provider>
 );
 
-ReactDOM.render(app, document.getElementById('root'));
+const loader = <p>Loading...</p>;
+
+ReactDOM.render(loader, document.getElementById('root'));
+
+store.dispatch(startSetExpenses()).then(() => {
+	ReactDOM.render(app, document.getElementById('root'));
+});
