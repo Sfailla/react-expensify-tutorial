@@ -10,7 +10,7 @@ import 'normalize.css/normalize.css';
 import './styles/style.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import 'react-dates/initialize';
-import './firebase/firebase';
+import { firebase } from './firebase/firebase';
 
 const store = configureStore();
 
@@ -26,4 +26,12 @@ ReactDOM.render(loader, document.getElementById('root'));
 
 store.dispatch(startSetExpenses()).then(() => {
 	ReactDOM.render(app, document.getElementById('root'));
+});
+
+firebase.auth().onAuthStateChanged(user => {
+	if (user) {
+		console.log('logged in');
+	} else {
+		console.log('logged out');
+	}
 });

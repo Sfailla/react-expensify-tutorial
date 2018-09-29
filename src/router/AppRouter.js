@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ExpenseDashboardPage from '../pages/ExpenseDashboard';
 import AddExpensePage from '../pages/AddExpensePage';
 import EditExpensePage from '../pages/EditExpensePage';
+import LoginPage from '../components/LoginPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import HelpPage from '../pages/HelpPage';
 import Header from '../components/Header';
@@ -13,11 +14,12 @@ const AppRouter = () => (
 		<Fragment>
 			<Header />
 			<Switch>
-				<Route path='/' component={ExpenseDashboardPage} exact={true} />
-				<Route path='/create' component={AddExpensePage} />
-				<Route path='/edit/:id' component={EditExpensePage} />
-				<Route path='/help' component={HelpPage} />
-				<Route component={NotFoundPage} />
+				<Route exact={true} path="/" component={LoginPage} />
+				<Route exact={true} path="dashboard" component={ExpenseDashboardPage} />
+				<Route exact={true} path="/create" component={AddExpensePage} />
+				<Route exact={true} path="/edit/:id" component={EditExpensePage} />
+				<Route exact={true} path="/help" component={HelpPage} />
+				<Route exact={true} component={NotFoundPage} />
 			</Switch>
 		</Fragment>
 	</Router>
