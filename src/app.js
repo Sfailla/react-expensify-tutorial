@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import AppRouter from './router/AppRouter';
 import { Provider } from 'react-redux';
 import { startSetExpenses } from './actions/expenses';
+import { history } from './router/AppRouter';
+import { login, logout } from './actions/auth';
 
 import configureStore from './store/configureStore';
 
@@ -19,19 +21,31 @@ const app = (
 		<AppRouter />
 	</Provider>
 );
+let hasRendered = false;
+const renderApp = () => {
+	if (!hasRendered) {
+		ReactDOM.render(app, document.getElementById('root'));
+		hasRendered = true;
+	}
+};
 
 const loader = <p>Loading...</p>;
-
 ReactDOM.render(loader, document.getElementById('root'));
-
-store.dispatch(startSetExpenses()).then(() => {
-	ReactDOM.render(app, document.getElementById('root'));
-});
 
 firebase.auth().onAuthStateChanged(user => {
 	if (user) {
 		console.log('logged in');
+
+		store.dispatch(login(user.uid));
+		store.dispatch(startSetExpenses()).then(() => {
+			renderApp();
+			if (history.location.pathname === '/') {
+				history.push('/dashboard');
+			}
+		});
 	} else {
-		console.log('logged out');
+		store.dispatch(logout());
+		renderApp();
+		history.push('/');
 	}
 });
