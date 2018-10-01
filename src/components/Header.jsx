@@ -7,8 +7,8 @@ export const Header = ({ logout }) => (
 	<header>
 		<Fragment>
 			<h1>Expensify</h1>
-			<NavLink exact to="/" activeClassName="is-active">
-				Login Page
+			<NavLink to="/dashboard" activeClassName="is-active">
+				Dashboard
 			</NavLink>
 			<NavLink to="/create" activeClassName="is-active">
 				Create Expense Page

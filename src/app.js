@@ -21,6 +21,7 @@ const app = (
 		<AppRouter />
 	</Provider>
 );
+
 let hasRendered = false;
 const renderApp = () => {
 	if (!hasRendered) {
