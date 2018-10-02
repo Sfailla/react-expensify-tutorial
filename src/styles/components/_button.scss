@@ -1,0 +1,11 @@
+.button {
+	border: none;
+
+	&__google {
+		width: 80%;
+		height: 4rem;
+		background: #4285f4;
+		color: white;
+		box-shadow: 0 7px 10px rgba(black, .6);
+	}
+}

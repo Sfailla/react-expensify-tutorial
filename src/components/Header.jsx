@@ -6,14 +6,17 @@ import { startLogout } from '../actions/auth';
 export const Header = ({ logout }) => (
 	<header>
 		<Fragment>
-			<h1>Expensify</h1>
+			<div className="header">
+				<h1 className="header__title">Expensify</h1>
+				<button onClick={logout}>Logout</button>
+			</div>
+
 			<NavLink to="/dashboard" activeClassName="is-active">
 				Dashboard
 			</NavLink>
 			<NavLink to="/create" activeClassName="is-active">
 				Create Expense Page
 			</NavLink>
-			<button onClick={logout}>Logout</button>
 		</Fragment>
 	</header>
 );

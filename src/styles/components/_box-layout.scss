@@ -1,0 +1,24 @@
+.box-layout {
+	background: url('/images/expensify-bg.png') no-repeat center center / cover;
+	width: 100vw;
+	height: calc(100vh + 5rem);
+	padding: 0;
+	margin: 0 0 2rem 0;
+	@include flex-center(center, center);
+
+	&__box {
+		background: fade-out($color: #ffffff, $amount: .15);
+		border-radius: 3px;
+		text-align: center;
+		width: 30rem;
+		height: 30rem;
+		padding: 3rem 4rem;
+		@include flex-center(center, center);
+		flex-direction: column;
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0;
+	}
+}

@@ -18,7 +18,9 @@ const store = configureStore();
 
 const app = (
 	<Provider store={store}>
+		{/* <div className="container"> */}
 		<AppRouter />
+		{/* </div> */}
 	</Provider>
 );
 
@@ -30,13 +32,11 @@ const renderApp = () => {
 	}
 };
 
-const loader = <p>Loading...</p>;
+const loader = <div className="loader" />;
 ReactDOM.render(loader, document.getElementById('root'));
 
 firebase.auth().onAuthStateChanged(user => {
 	if (user) {
-		console.log('logged in');
-
 		store.dispatch(login(user.uid));
 		store.dispatch(startSetExpenses()).then(() => {
 			renderApp();
