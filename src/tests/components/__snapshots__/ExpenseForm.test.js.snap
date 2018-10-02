@@ -115,7 +115,7 @@ exports[`should render ExpenseForm correctly 1`] = `
     <button
       type="submit"
     >
-      Add Expense
+      edit expense
     </button>
   </form>
 </Fragment>
@@ -236,7 +236,7 @@ exports[`should render ExpenseForm correctly with expense data 1`] = `
     <button
       type="submit"
     >
-      Add Expense
+      edit expense
     </button>
   </form>
 </Fragment>
@@ -357,7 +357,7 @@ exports[`should set description on input change 1`] = `
     <button
       type="submit"
     >
-      Add Expense
+      edit expense
     </button>
   </form>
 </Fragment>
@@ -478,7 +478,7 @@ exports[`should set note on textArea change 1`] = `
     <button
       type="submit"
     >
-      Add Expense
+      edit expense
     </button>
   </form>
 </Fragment>
@@ -610,7 +610,7 @@ exports[`should throw error when fields are blank 1`] = `
     <button
       type="submit"
     >
-      Add Expense
+      edit expense
     </button>
   </form>
 </Fragment>

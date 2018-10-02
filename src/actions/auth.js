@@ -9,7 +9,9 @@ export const startLogin = () => {
 
 export const startLogout = () => {
 	return () => {
-		return firebase.auth().signOut();
+		return firebase.auth().signOut().then(() => {
+			window.location.assign('https://accounts.google.com/Logout');
+		});
 	};
 };
 

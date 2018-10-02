@@ -72,18 +72,18 @@ export class ExpenseForm extends React.Component {
 				)}
 				<form onSubmit={this.onSubmit}>
 					<input
-						type='text'
-						placeholder='Description'
+						type="text"
+						placeholder="Description"
 						autoFocus
 						value={this.state.description}
 						onChange={this.onDescriptionChange}
 					/>
 					<input
-						name='amount'
-						type='text'
+						name="amount"
+						type="text"
 						onChange={this.onAmountChange}
 						value={this.state.amount}
-						placeholder='Amount'
+						placeholder="Amount"
 					/>
 
 					<SingleDatePicker
@@ -97,10 +97,16 @@ export class ExpenseForm extends React.Component {
 					<textarea
 						onChange={this.onNoteChange}
 						value={this.state.note}
-						placeholder='Add a note for your expense (optional)'
+						placeholder="Add a note for your expense (optional)"
 					/>
 
-					<button type='submit'>Add Expense</button>
+					<button type="submit">
+						{window.location.pathname === '/create' ? (
+							'add expense'
+						) : (
+							'edit expense'
+						)}
+					</button>
 				</form>
 			</Fragment>
 		);
