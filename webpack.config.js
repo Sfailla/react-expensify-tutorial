@@ -29,7 +29,7 @@ module.exports = (env, mode) => {
 					loader: 'babel-loader'
 				},
 				{
-					test: /\.(sa|sc|c)ss$/,
+					test: /\.s?css$/,
 					use: [
 						'style-loader',
 						MiniCssExtractPlugin.loader,
