@@ -16,7 +16,6 @@ module.exports = (env, mode) => {
 	return {
 		entry: {
 			app: './src/app.js'
-			// app: './src/playground/promises.js'
 		},
 		output: {
 			filename: 'bundle.js',
@@ -50,8 +49,8 @@ module.exports = (env, mode) => {
 				},
 				{
 					test: /\.(gif|png|jpeg)$/i,
-					exclude: [ /node_modules/ ],
-					loaders: [ 'file-loader', 'image-webpack-loader' ]
+					exclude: [/node_modules/],
+					loaders: ['file-loader', 'image-webpack-loader']
 				}
 			]
 		},
@@ -82,7 +81,7 @@ module.exports = (env, mode) => {
 			})
 		],
 		resolve: {
-			extensions: [ '.js', '.jsx' ]
+			extensions: ['.js', '.jsx']
 		},
 		devtool: isProduction ? 'source-map' : 'inline-source-map',
 		devServer: {
