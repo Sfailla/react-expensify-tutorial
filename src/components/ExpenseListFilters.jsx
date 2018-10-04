@@ -35,25 +35,26 @@ export class ExpenseListFilters extends React.Component {
 
 	render() {
 		return (
-			<Fragment>
+			<div className="filters">
 				<input
-					style={{ height: '25px' }}
-					type='text'
+					className="filters__text"
+					type="text"
 					value={this.props.filters.text}
 					onChange={this.onTextChange}
 				/>
 
 				<select
+					className="filters__select"
 					value={this.props.filters.sortBy}
 					onChange={this.onSortChange}>
-					<option value='date'>Date</option>
-					<option value='amount'>Amount</option>
+					<option value="date">Date</option>
+					<option value="amount">Amount</option>
 				</select>
 
 				<DateRangePicker
-					startDateId='startDate'
+					startDateId="startDate"
 					startDate={this.props.filters.startDate}
-					endDateId='endDate'
+					endDateId="endDate"
 					endDate={this.props.filters.endDate}
 					onDatesChange={this.onDatesChange}
 					focusedInput={this.state.calenderFocused}
@@ -61,7 +62,7 @@ export class ExpenseListFilters extends React.Component {
 					numberOfMonths={1}
 					isOutsideRange={() => false}
 				/>
-			</Fragment>
+			</div>
 		);
 	}
 }

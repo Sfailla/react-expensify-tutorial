@@ -1,11 +1,28 @@
 .button {
 	border: none;
 
-	&__google {
+	&__login {
 		width: 80%;
 		height: 4rem;
 		background: #4285f4;
 		color: white;
 		box-shadow: 0 7px 10px rgba(black, .6);
+	}
+
+	&__logout {
+		background: transparent;
+		color: white;
+		font-size: 2rem;
+	}
+
+	&__add-expense {
+		display: block;
+		width: 15rem;
+		height: 3rem;
+		margin-top: 2rem;
+		color: white;
+		background: #2da0ce;
+		text-decoration: none;
+		@include flex-center(center, center);
 	}
 }

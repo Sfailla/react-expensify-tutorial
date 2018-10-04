@@ -2,8 +2,12 @@
 
 exports[`should render ExpenseDashboard 1`] = `
 <Fragment>
-  <Connect(ExpensesSummary) />
-  <Connect(ExpenseList) />
-  <Connect(ExpenseListFilters) />
+  <div
+    className="container"
+  >
+    <Connect(ExpensesSummary) />
+    <Connect(ExpenseListFilters) />
+    <Connect(ExpenseList) />
+  </div>
 </Fragment>
 `;

@@ -1,18 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseListFilters correctly 1`] = `
-<Fragment>
+<div
+  className="filters"
+>
   <input
+    className="filters__text"
     onChange={[Function]}
-    style={
-      Object {
-        "height": "25px",
-      }
-    }
     type="text"
     value=""
   />
   <select
+    className="filters__select"
     onChange={[Function]}
     value="date"
   >
@@ -122,22 +121,21 @@ exports[`should render ExpenseListFilters correctly 1`] = `
     withFullScreenPortal={false}
     withPortal={false}
   />
-</Fragment>
+</div>
 `;
 
 exports[`should render ExpenseListFilters with altFilter correctly 1`] = `
-<Fragment>
+<div
+  className="filters"
+>
   <input
+    className="filters__text"
     onChange={[Function]}
-    style={
-      Object {
-        "height": "25px",
-      }
-    }
     type="text"
     value="bills"
   />
   <select
+    className="filters__select"
     onChange={[Function]}
     value="amount"
   >
@@ -247,5 +245,5 @@ exports[`should render ExpenseListFilters with altFilter correctly 1`] = `
     withFullScreenPortal={false}
     withPortal={false}
   />
-</Fragment>
+</div>
 `;

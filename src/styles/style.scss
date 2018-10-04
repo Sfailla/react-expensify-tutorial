@@ -1,10 +1,10 @@
+@import './base/functions';
 @import './base/base';
 @import './base/variables';
-@import './base/settings';
-@import './base/functions';
 
 @import './components/loginPage';
 @import './components/loader';
 @import './components/box-layout';
 @import './components/button';
 @import './components/header';
+@import './components/filters';

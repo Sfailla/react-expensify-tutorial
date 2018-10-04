@@ -1,11 +1,24 @@
 .header {
 	width: 100%;
-	height: 7rem;
-	background: lightgray;
-	@include flex-center(space-between, center);
+	height: 8rem;
+	color: white;
+	background: var(--blue);
+
+	&__container {
+		width: 100%;
+		height: 8rem;
+		@include flex-center(space-between, center);
+	}
 
 	&__title {
+		font-weight: bold;
 		padding: 0;
 		margin: 0;
+	}
+
+	&__link {
+		display: block;
+		color: white;
+		text-decoration: none;
 	}
 }

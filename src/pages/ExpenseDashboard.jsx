@@ -5,9 +5,11 @@ import ExpensesSummary from '../components/ExpensesSummary';
 
 const ExpenseDashboardPage = () => (
 	<Fragment>
-		<ExpensesSummary />
-		<ExpenseList />
-		<ExpenseListFilters />
+		<div className="container">
+			<ExpensesSummary />
+			<ExpenseListFilters />
+			<ExpenseList />
+		</div>
 	</Fragment>
 );
 export default ExpenseDashboardPage;
