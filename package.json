@@ -34,7 +34,7 @@
 		"image-webpack-loader": "^4.3.1",
 		"jest": "^23.4.1",
 		"mini-css-extract-plugin": "^0.4.3",
-		"moment": "^2.22.2",
+		"moment": "^2.29.4",
 		"node-sass": "^4.7.2",
 		"normalize.css": "^8.0.0",
 		"numeral": "^2.0.6",
