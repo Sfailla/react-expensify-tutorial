@@ -26,7 +26,7 @@
 		"enzyme": "^3.6.0",
 		"enzyme-adapter-react-16": "^1.5.0",
 		"enzyme-to-json": "^3.3.4",
-		"express": "^4.16.3",
+		"express": "^4.17.3",
 		"file-loader": "^1.1.11",
 		"firebase": "^5.5.1",
 		"helmet": "^3.13.0",
